@@ -5,4 +5,4 @@ cd /home/ec2-user/acebook
 sudo systemctl reload mongod
 
 # Run npm
-npm run start
+npm start > /dev/null 2> /dev/null < /dev/null &

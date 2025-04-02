@@ -4,4 +4,4 @@
 sudo systemctl reload mongod
 
 # Start server
-npm start
+npm run start

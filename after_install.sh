@@ -1,6 +1,6 @@
 #!/bin/sh
 
-source /home/ec2-user/.bash_profile
+# source /home/ec2-user/.bash_profile
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | bash
 . ~/.nvm/nvm.sh

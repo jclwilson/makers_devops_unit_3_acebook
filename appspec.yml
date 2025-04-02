@@ -4,11 +4,6 @@ files:
   - source: /
     destination: /home/ec2-user/acebook
 file_exists_behaviour: OVERWRITE
-permissions:
-  - object: /home/ec2-user/acebook
-    owner: ec2-user
-    group: wheel
-    mode: 777
 hooks:
   AfterInstall:
     - location: after_install.sh

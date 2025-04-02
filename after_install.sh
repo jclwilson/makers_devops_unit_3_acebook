@@ -1,5 +1,7 @@
 #!/bin/sh
 
+sudo chown -R ec2-user:ec2-user acebook/
+
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | bash
 . ~/.nvm/nvm.sh
 nvm install node

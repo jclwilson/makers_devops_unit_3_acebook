@@ -1,8 +1,7 @@
 #! /bin/sh
 cd /home/ec2-user/acebook
 
-# Restart mongod
-sudo systemctl reload mongod
+npm ci -g pm2
 
-# Use NPX to run PM2 and point it to config file
-npx pm2 start ecosystem.config.js
+# Run PM2 and point it to config file
+pm2 start ecosystem.config.js

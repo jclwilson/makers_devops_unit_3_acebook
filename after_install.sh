@@ -13,7 +13,7 @@ cd /home/ec2-user/acebook
 # Install latest NPM
 npm install -g npm@latest
 # Install dependencies from package.json
-npm install
+npm ci
 
 # Add mongodb repo to YUM sources
 sudo sh -c "echo -e '[mongodb-org-8.0]\nname=MongoDB Repository\nbaseurl=https://repo.mongodb.org/yum/amazon/2023/mongodb-org/8.0/x86_64/\ngpgcheck=1\nenabled=1\ngpgkey=https://pgp.mongodb.com/server-8.0.asc' > /etc/yum.repos.d/mongodb-org-8.0.repo"

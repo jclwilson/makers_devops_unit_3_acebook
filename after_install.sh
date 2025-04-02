@@ -1,20 +1,13 @@
 #!/bin/sh
 
-sudo chown -R ec2-user:ec2-user acebook/
+source /home/ec2-user/.bash_profile
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | bash
 . ~/.nvm/nvm.sh
 nvm install node
 nvm use node
 
-DIR="/home/ec2-user/acebook"
-if [ -d "$DIR" ]; then
-  echo "${DIR} exists"
-else
-  echo "Creating ${DIR} directory"
-  mkdir ${DIR}
-fi
-
+sudo chown -R ec2-user:ec2-user /home/ec2-user/acebook/
 # Change directory into /acebook
 cd /home/ec2-user/acebook
 # Install latest NPM
@@ -33,6 +26,3 @@ sudo systemctl start mongod
 
 # Enable at startup
 sudo systemctl enable mongod
-
-# Start server
-npm start

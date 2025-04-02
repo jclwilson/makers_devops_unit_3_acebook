@@ -1,7 +1,8 @@
 #! /bin/sh
+cd /home/ec2-user/acebook
 
 # Restart mongod
 sudo systemctl reload mongod
 
-# Start server
+# Run npm
 npm run start

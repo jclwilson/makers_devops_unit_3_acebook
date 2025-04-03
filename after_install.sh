@@ -1,17 +1,26 @@
 #!/bin/sh
 
-# source /home/ec2-user/.bash_profile
-
+# Download nvm 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | bash
+
+# Run NVM install script
 . ~/.nvm/nvm.sh
+
+# Install the latest version of node
 nvm install node
+
+# Use the latest version of node
 nvm use node
 
+# Change the ownership of the newly-created ./acebook directory 
 sudo chown -R ec2-user:ec2-user /home/ec2-user/acebook/
+
 # Change directory into /acebook
 cd /home/ec2-user/acebook
+
 # Install latest NPM
 npm install -g npm@latest
+
 # Install dependencies from package.json
 npm ci
 
